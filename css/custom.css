@@ -1,0 +1,178 @@
+/* 定义一些常量 */
+:root {
+  --border-style: 1px solid rgb(169, 169, 169);
+}
+::-webkit-scrollbar-thumb {
+ background-color:#ffb8b8;
+ background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+ border-radius:3em
+}
+::-webkit-scrollbar-track {
+ background-color:#fff;
+ border-radius:3em
+}
+::-webkit-scrollbar {
+ width:8px;
+ height:15px
+}
+
+
+/* 首页文章卡片高斯模糊并设定圆角 */
+#recent-posts > .recent-post-item {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 20px;
+  border: var(--border-style);
+}
+
+/* 首页侧栏卡片1————个人信息部分高斯模糊并替换底部图片 */
+#aside-content .card-widget.card-info {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+  background-image:url(/img/tx/light.png)!important;
+  background-repeat:no-repeat!important;
+  background-attachment:inherit!important;
+  background-size:100%!important;
+}
+
+/* 设定鼠标放置后头像和个人介绍消失的效果 */
+#aside-content .card-widget.card-info .is-center:first-child {
+ transition:.3s
+}
+#aside-content .card-widget.card-info .is-center:first-child:hover {
+ opacity:0
+}
+.avatar-img {
+ overflow:hidden;
+ margin:10px auto!important;
+ width:90px!important;
+ height:90px!important
+}
+.avatar-img img:hover {
+ transform:none!important
+}
+
+/* 设定点我康康的形状等参数，颜色参数在主题_config的theme_color中 */
+#aside-content .card-info #card-info-btn{
+  /*background-color: #ffb8b8!important;*/
+  border-radius:6px
+}
+
+/* 修改公告的形状，加上高斯模糊 */
+#aside-content .card-widget.card-announcement {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 修改最近文章的形状，加上高斯模糊 */
+#aside-content .card-widget.card-recent-post {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 修改左侧归档栏的形状和高斯模糊 */
+#aside-content .card-widget.card-archives {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 修改左侧网站资讯栏的形状并加上高斯模糊 */
+#aside-content .card-widget.card-webinfo {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 目录页高斯模糊 */
+/*#aside-content .sticky_layout { */
+#aside-content #card-toc {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 为正文背景添加高斯模糊效果 */
+div#post,
+div#page,
+div#archive {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+
+/* 页码半透明 */
+#pagination .pagination .current {
+ background:rgba(255,184,184,.6)!important;
+ -webkit-backdrop-filter:saturate(180%) blur(20px);
+ backdrop-filter:saturate(180%) blur(20px)!important;
+ border-radius:8px
+}
+
+#pagination .page-number,
+.next,
+.prev {
+ background:rgba(255,255,255,.4)!important;
+ color:rgba(255,255,255,.8);
+ -webkit-backdrop-filter:saturate(180%) blur(20px);
+ backdrop-filter:saturate(180%) blur(20px)
+}
+#archive #pagination .pagination>* {
+ display:inline-block;
+ margin:0 6px;
+ width:24px;
+ height:24px;
+ line-height:24px;
+ border-radius:6px
+}
+
+/* 设置导航栏的高斯模糊 */
+#page-header.nav-fixed #nav {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+}
+
+/* 美化搜索页面 */
+#local-search .search-dialog {
+  background:rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 15px;
+}
+/* 搜索框高斯模糊 */
+#local-search .search-dialog .local-search-box input {
+  background:rgba(255,255,255,.4)!important;
+ -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 15px;
+}
+/* 夜间模式美化 */
+
+/* 更换夜间模式头像背景 */
+[data-theme="dark"] #aside-content .card-widget.card-info {
+  background-image:url(/img/tx/dark.png)!important;
+}
+/* 修改夜间模式点我康康的颜色 */
+[data-theme="dark"] #card-info-btn {
+  background: rgba(0,0,0,.5) !important;
+}

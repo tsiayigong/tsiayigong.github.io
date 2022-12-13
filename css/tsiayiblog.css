@@ -1,0 +1,799 @@
+@charset "UTF-8";
+
+:root {
+  --heo-white: #fff;
+  --heo-white-op: rgba(255, 255, 255, 0.2);
+  --heo-black: #000;
+  --heo-black-op: rgba(0, 0, 0, 0.2);
+  --heo-none: #00000000;
+  --heo-gray: #999999;
+  --heo-gray-op: #9999992b;
+  --heo-vip: #e5a80d;
+  --heo-main: var(--heo-theme);
+  --heo-main-op: var(--heo-theme-op);
+  --heo-main-op-deep: var(--heo-theme-op-deep);
+  --heo-main-none: var(--heo-theme-none);
+  --heo-shadow-theme: 0 8px 12px -3px var(--heo-theme-op);
+  --heo-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, .15);
+  --heo-shadow-main: 0 8px 12px -3px var(--heo-main-op);
+  --heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, .20);
+  --heo-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, .20);
+  --heo-shadow-black: 0 0 12px 4px rgba(0, 0, 0, .05);
+  --heo-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, .12);
+  --heo-shadow-red: 0 8px 12px -3px #ee7d7936;
+  --heo-shadow-green: 0 8px 12px -3px #87ee7936;
+  --heo-logo-color: linear-gradient(215deg, #4584ff 0%, #cf0db9 100%);
+  --heo-snackbar-time: 5s;
+  --style-border: 1px solid var(--heo-card-border);
+  --style-border-always: 1px solid var(--heo-card-border);
+  --style-border-hover: 1px solid var(--heo-main);
+  --style-border-hover-always: 1px solid var(--heo-main);
+  --style-border-dashed: 1px dashed var(--heo-theme-op);
+  --border-style: 1px solid rgb(169, 169, 169);
+}
+
+::selection {
+  background: var(--heo-fontcolor);
+  color: var(--heo-background);
+}
+
+::-webkit-scrollbar-thumb {
+ background-color:#ffb8b8;
+ background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+ border-radius:3em
+}
+::-webkit-scrollbar-track {
+ background-color:#fff;
+ border-radius:3em
+}
+::-webkit-scrollbar {
+ width:8px;
+ height:15px
+}
+
+[data-theme=light] {
+  --heo-theme: #425AEF;
+  --heo-theme-op: #4259ef23;
+  --heo-theme-op-deep: #4259efdd;
+  --heo-theme-none: #4259ef01;
+  --heo-blue: #425AEF;
+  --heo-red: #D8213C;
+  --heo-pink: #FF7C7C;
+  --heo-green: #28a63f;
+  --heo-yellow: #c28b00;
+  --heo-yellow-op: #d99c001a;
+  --heo-orange: #e38100;
+  --heo-fontcolor: #363636;
+  --heo-background: #f7f9fe;
+  --heo-reverse: #000;
+  --heo-maskbg: rgba(255, 255, 255, 0.6);
+  --heo-maskbgdeep: rgba(255, 255, 255, 0.85);
+  --heo-hovertext: var(--heo-main);
+  --heo-ahoverbg: #F7F7FA;
+  --heo-lighttext: var(--heo-main);
+  --heo-secondtext: rgba(60, 60, 67, 0.6);
+  --heo-scrollbar: rgba(60, 60, 67, 0.4);
+  --heo-card-btn-bg: #edf0f7;
+  --heo-post-blockquote-bg: #fafcff;
+  --heo-post-tabs-bg: #f2f5f8;
+  --heo-secondbg: #f1f3f8;
+  --heo-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
+  --heo-card-bg: #fff;
+  --heo-card-bg-op: var(--heo-black-op);
+  --heo-card-bg-none: rgba(255, 255, 255, 0);
+  --heo-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
+  --heo-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
+  --heo-card-border: #e3e8f7;
+  --heo-shadow-border: 0 8px 16px -4px #2c2d300c;
+  --style-border-forever: 2px solid var(--heo-main);
+}
+
+[data-theme=dark] {
+  --heo-theme: #0084FF;
+  --heo-theme-op: #0084FF23;
+  --heo-theme-op-deep: #0084ffdd;
+  --heo-theme-none: #0084FF00;
+  --heo-blue: #0084FF;
+  --heo-red: #FF3842;
+  --heo-pink: #FF7C7C;
+  --heo-green: #57bd6a;
+  --heo-yellow: #ffc93e;
+  --heo-yellow-op: #ffc93e30;
+  --heo-orange: #ff953e;
+  --heo-fontcolor: #F7F7FA;
+  --heo-background: #18171d;
+  --heo-reverse: #fff;
+  --heo-maskbg: rgba(0, 0, 0, 0.6);
+  --heo-maskbgdeep: rgba(0, 0, 0, 0.85);
+  --heo-hovertext: #0A84FF;
+  --heo-ahoverbg: #fff;
+  --heo-lighttext: #f2b94b;
+  --heo-secondtext: #a1a2b8;
+  --heo-scrollbar: rgba(200, 200, 223, 0.4);
+  --heo-card-btn-bg: #30343f;
+  --heo-post-blockquote-bg: #000;
+  --heo-post-tabs-bg: #121212;
+  --heo-secondbg: #30343f;
+  --heo-shadow-nav: 0 5px 20px 0px rgba(28, 28, 28, 0.4);
+  --heo-card-bg: #1d1e22;
+  --heo-card-bg-op: var(--heo-white-op);
+  --heo-card-bg-none: #1d1b2600;
+  --heo-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.0);
+  --heo-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.0);
+  --heo-card-border: #282829;
+  --heo-shadow-border: 0 8px 16px -4px #00000050;
+  --style-border-forever: 2px solid var(--heo-lighttext);
+}
+
+@media screen and (max-width: 768px){
+  :root{
+    --style-border: 0px solid var(--heo-card-border);
+    --style-border-hover: 0px solid var(--heo-main);
+  }
+}
+
+/* 省略 */
+
+a {
+  background-color: transparent;
+}
+
+/* 首页文章卡片高斯模糊并设定圆角 */
+#recent-posts > .recent-post-item {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 20px;
+  border: var(--border-style);
+}
+
+/* 首页侧栏卡片1————个人信息部分高斯模糊并替换底部图片 */
+#aside-content .card-widget.card-info {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+  background-image:url(/img/tx/light.png)!important;
+  background-repeat:no-repeat!important;
+  background-attachment:inherit!important;
+  background-size:100%!important;
+}
+
+/* 设定鼠标放置后头像和个人介绍消失的效果 */
+#aside-content .card-widget.card-info .is-center:first-child {
+ transition:.3s
+}
+#aside-content .card-widget.card-info .is-center:first-child:hover {
+ opacity:0
+}
+.avatar-img {
+ overflow:hidden;
+ margin:10px auto!important;
+ width:90px!important;
+ height:90px!important
+}
+.avatar-img img:hover {
+ transform:none!important
+}
+
+/* 设定点我康康的形状等参数，颜色参数在主题_config的theme_color中 */
+#aside-content .card-info #card-info-btn{
+  /*background-color: #ffb8b8!important;*/
+  border-radius:6px
+}
+
+/* 修改公告的形状，加上高斯模糊 */
+#aside-content .card-widget.card-announcement {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 修改最近文章的形状，加上高斯模糊 */
+#aside-content .card-widget.card-recent-post {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 修改左侧归档栏的形状和高斯模糊 */
+#aside-content .card-widget.card-archives {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 修改左侧网站资讯栏的形状并加上高斯模糊 */
+#aside-content .card-widget.card-webinfo {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 目录页高斯模糊 */
+/*#aside-content .sticky_layout { */
+#aside-content #card-toc {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 为正文背景添加高斯模糊效果 */
+div#post,
+div#page,
+div#archive {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+
+/* 页码半透明 */
+#pagination .pagination .current {
+ background:rgba(255,184,184,.6)!important;
+ -webkit-backdrop-filter:saturate(180%) blur(20px);
+ backdrop-filter:saturate(180%) blur(20px)!important;
+ border-radius:8px
+}
+
+#pagination .page-number,
+.next,
+.prev {
+ background:rgba(255,255,255,.4)!important;
+ color:rgba(255,255,255,.8);
+ -webkit-backdrop-filter:saturate(180%) blur(20px);
+ backdrop-filter:saturate(180%) blur(20px)
+}
+#archive #pagination .pagination>* {
+ display:inline-block;
+ margin:0 6px;
+ width:24px;
+ height:24px;
+ line-height:24px;
+ border-radius:6px
+}
+
+/* 设置导航栏的高斯模糊 */
+#page-header.nav-fixed #nav {
+  background: rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+}
+
+#nav .menus_items .menus_item:hover .menus_item_child{
+  background-color: rgba(255,255,255,.6) !important;
+}
+
+/* 美化搜索页面 */
+#local-search .search-dialog {
+  background:rgba(255,255,255,.4)!important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 15px;
+}
+/* 搜索框高斯模糊 */
+#local-search .search-dialog .local-search-box input {
+  background:rgba(255,255,255,.4)!important;
+ -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px)!important;
+  border-radius: 15px;
+}
+/* 夜间模式美化 */
+
+/* 更换夜间模式头像背景 */
+[data-theme="dark"] #aside-content .card-widget.card-info {
+  background-image:url(/img/tx/dark.png)!important;
+}
+/* 修改夜间模式点我康康的颜色 */
+[data-theme="dark"] #card-info-btn {
+  background: rgba(0,0,0,.5) !important;
+}
+
+/* aplayer */
+
+/* 导航栏音乐 */
+@media screen and (max-width: 1300px) {
+  #nav-music {
+    display: none !important;
+  }
+}
+
+#nav-music {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  transform-origin: left bottom;
+  box-shadow: var(--heo-shadow-border);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+#nav-music:active {
+  transform: scale(0.97);
+}
+
+#nav-music.playing {
+  box-shadow: 0 0px 12px -3px var(--heo-none);
+  -webkit-animation: playingShadow 5s linear infinite;
+}
+
+@-webkit-keyframes playingShadow {
+  0% {
+    box-shadow: 0 0px 12px -3px var(--heo-none);
+  }
+
+  50% {
+    box-shadow: 0 0px 12px 0px var(--heo-main);
+  }
+
+  100% {
+    box-shadow: 0 0px 12px -3px var(--heo-none);
+  }
+}
+
+#nav-music .aplayer.aplayer-withlrc .aplayer-pic {
+  height: 25px;
+  width: 25px;
+  border-radius: 40px;
+  z-index: 1;
+  transition: 0.3s;
+  -webkit-transform: rotate(0deg)scale(1);
+  border: var(--style-border-always);
+  -webkit-animation: changeright 24s linear infinite;
+  animation-play-state: paused;
+}
+
+#nav-music.playing .aplayer.aplayer-withlrc .aplayer-pic {
+  box-shadow: 0 0 14px #ffffffa6;
+  -webkit-transform: rotate(0deg)scale(1.1);
+  border-color: var(--heo-white);
+  animation-play-state: running;
+}
+
+@-webkit-keyframes changeright {
+
+  0% {
+    -webkit-transform: rotate(0deg)scale(1.1);
+    box-shadow: 0 0 2px #ffffff00;
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg)scale(1.1);
+    box-shadow: 0 0 10px #ffffff;
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg)scale(1.1);
+    box-shadow: 0 0 2px #ffffff00;
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg)scale(1.1);
+    box-shadow: 0 0 10px #ffffff;
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg)scale(1.1);
+    box-shadow: 0 0 2px #ffffff00;
+  }
+}
+
+#nav-music .aplayer.aplayer-withlrc .aplayer-info {
+  height: 100%;
+  color: var(--heo-fontcolor);
+  margin-left: 8px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#nav-music.playing .aplayer.aplayer-withlrc .aplayer-info {
+  color: var(--heo-white);
+}
+
+#nav-music #nav-music-hoverTips {
+  color: var(--heo-white);
+  background: var(--heo-main);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 40px;
+  opacity: 0;
+  font-size: 12px;
+  transition: 0s;
+  z-index: 2;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+#nav-music:hover:not(.playing) #nav-music-hoverTips {
+  opacity: 1;
+}
+
+#nav-music.playing #nav-music-hoverTips {
+  opacity: 0;
+}
+
+#nav-music .aplayer {
+  background: var(--card-bg);
+  border-radius: 60px;
+  height: 41px;
+  display: flex;
+  margin: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  border: var(--style-border);
+  box-shadow: none;
+}
+
+#nav-music.playing .aplayer {
+  background: var(--heo-main-op-deep);
+  border: var(--style-border-hover);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+#nav-music .aplayer .aplayer-notice {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-miniswitcher {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  padding-right: 12px;
+}
+
+#nav-music .aplayer .aplayer-pic .aplayer-play {
+  opacity: 0;
+}
+
+#nav-music .aplayer-list {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-music {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  z-index: 1;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-music .aplayer-author {
+  display: none;
+}
+
+#nav-music .aplayer.aplayer-withlist .aplayer-info {
+  border: none;
+}
+
+#nav-music .aplayer .aplayer-pic div {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-music .aplayer-title {
+  cursor: pointer;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-controller {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+  height: 100%;
+  background: none;
+  opacity: 0;
+}
+
+#nav-music.playing .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+  opacity: 1;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  height: 100%;
+  opacity: 0.1;
+  background-color: var(--heo-white) !important;
+  -webkit-animation: lightBar 5s ease infinite;
+  animation-play-state: paused;
+}
+
+#nav-music.playing .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  animation-play-state: running;
+}
+
+@-webkit-keyframes lightBar {
+
+  0% {
+    opacity: 0.1;
+  }
+
+  60% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+
+/* 歌词 */
+#nav-music .aplayer.aplayer-withlrc .aplayer-lrc {
+  width: 0;
+  opacity: 0;
+  transition: 0.3s;
+  margin-left: 8px;
+  margin-top: -2px;
+}
+
+#nav-music.playing .aplayer.aplayer-withlrc .aplayer-lrc {
+  width: 200px;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+#nav-music .aplayer .aplayer-lrc p.aplayer-lrc-current {
+  color: var(--heo-white);
+  border: none;
+}
+
+#nav-music .aplayer .aplayer-lrc:after,
+#nav-music .aplayer .aplayer-lrc:before {
+  display: none;
+}
+
+#nav-music .aplayer .aplayer-lrc p {
+  color: #ffffffb3;
+}
+
+/* rightMenu右键菜单 */
+#rightMenu {
+  display: none;
+  position: fixed;
+  padding: 0 0.25rem;
+  width: 9rem;
+  height: fit-content;
+  top: 10%;
+  left: 10%;
+  background-color: var(--heo-maskbgdeep);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: var(--heo-fontcolor);
+  border-radius: 12px;
+  z-index: 99994;
+  border: var(--style-border);
+  user-select: none;
+  box-shadow: var(--heo-shadow-black);
+}
+
+#rightMenu:hover {
+  border: var(--style-border-hover);
+  box-shadow: var(--heo-shadow-theme);
+}
+
+#rightMenu .rightMenu-group {
+  padding: 0.35rem 0.3rem;
+  transition: 0.3s;
+}
+
+#rightMenu .rightMenu-line {
+  border-top: 1px dashed var(--heo-theme-op);
+}
+
+#rightMenu .rightMenu-group.rightMenu-small {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rightMenu .rightMenu-group .rightMenu-item {
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#rightMenu .rightMenu-line .rightMenu-item {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0;
+}
+
+#rightMenu .rightMenu-group.rightMenu-line .rightMenu-item {
+  display: flex;
+}
+
+#rightMenu .rightMenu-group .rightMenu-item:hover {
+  background-color: var(--heo-main);
+  color: var(--heo-white);
+  box-shadow: var(--heo-shadow-main);
+}
+
+#rightMenu .rightMenu-group .rightMenu-item:active {
+  transform: scale(0.97);
+}
+
+#rightMenu .rightMenu-group .rightMenu-item i {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+#rightMenu .rightMenu-line .rightMenu-item i {
+  margin: 0 0.25rem;
+}
+
+#rightMenu .rightMenu-group .rightMenu-item span {
+  line-height: 1.5rem;
+}
+
+.rightMenu-small .rightMenu-item {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+#rightmenu-mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: none;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 101;
+  margin: 0 !important;
+  z-index: 99993;
+}
+
+/* 消息弹窗 */
+.snackbar-container {
+  background: var(--heo-main) !important;
+  color: var(--heo-white) !important;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: center !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  margin: 0px !important;
+  left: 0px !important;
+  height: 60px !important;
+  transform: none !important;
+}
+
+.snackbar-container p {
+  font-weight: bold !important;
+  text-align: center !important;
+  font-size: 0.8rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.snackbar-container .action {
+  color: var(--heo-white) !important;
+  padding: 4px 6px !important;
+  font-weight: bold;
+  border-radius: 8px !important;
+  transition: 0.3s;
+  border: var(--style-border) !important;
+}
+
+.snackbar-container .action:hover {
+  color: var(--heo-main) !important;
+  background: var(--heo-white) !important;
+}
+
+.snackbar-container::after {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--heo-white);
+  opacity: 0.1;
+  content: "";
+  animation: snackbar-progress var(--heo-snackbar-time) linear forwards;
+  pointer-events: none;
+}
+
+@keyframes snackbar-progress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* 安知鱼提供的加载页 */
+.loading-img {
+  background: url(/img/tx/tx.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* 定义a标签 */
+a {
+  background-color: transparent;
+}
+
+a {
+  color: rgb(153, 169, 191);
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+  overflow-wrap: break-word;
+}
+
+a:hover {
+  color: rgb(48, 122, 246);
+}
+
+/* 全局超链接 */
+a {
+  color: var(--heo-fontcolor);
+}
+
+a:hover {
+  color: var(--heo-hovertext);
+}
+
+
+
+
+
+
+
+

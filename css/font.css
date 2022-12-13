@@ -1,0 +1,9 @@
+@font-face{
+    font-family: 'WoZaiXingYeShenChuDengNi';
+    font-display: swap;
+    src: url('/font/WoZaiXingYeShenChuDengNi.ttf') format("truetype");
+}
+
+body {
+    font-family: "Microsoft YaHei", 'WoZaiXingYeShenChuDengNi';
+}

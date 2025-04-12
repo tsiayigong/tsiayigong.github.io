@@ -1,0 +1,47 @@
+{
+  "name": "@tsiayigong/vitepress-theme",
+  "version": "0.1.0",
+  "author": "Tsiayi Gong <tsiayigong@gmail.com>",
+  "description": "VitePress theme for tsiayigong.github.io",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsiayigong/tsiayigong.github.io.git",
+    "directory": "packages/vitepress-theme"
+  },
+  "type": "module",
+  "module": "./dist/vitepress-theme.js",
+  "main": "./dist/vitepress-theme.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vitepress-theme.js",
+      "require": "./dist/vitepress-theme.cjs"
+    },
+    "./tailwind": {
+      "import": "./dist/tailwind.js",
+      "require": "./dist/tailwind.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "node scripts/patch-katex.mjs && vite build"
+  },
+  "dependencies": {
+    "@giscus/vue": "^3.0.0",
+    "katex": "^0.16.15",
+    "vitepress": "1.5.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@tabler/icons-vue": "^3.24.0",
+    "@types/katex": "^0.16.7",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "medium-zoom": "^1.1.0",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.3",
+    "vite-plugin-dts": "4.3.0"
+  }
+}

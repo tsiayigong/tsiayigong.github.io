@@ -5,10 +5,10 @@ import Giscus from '@giscus/vue'
 <template>
   <Giscus
     id="comments"
-    repo="stone-zeng/stone-zeng.site"
+    repo="tsiayigong/tsiayigong.github.io"
     repoId="MDEwOlJlcG9zaXRvcnkxNjQ0Njk4MzA="
     category="Comments"
-    categoryId="DIC_kwDOCc2cRs4CbS7P"
+    categoryId="DIC_kwDOIgWCOM4CpJl8"
     mapping="pathname"
     theme="preferred_color_scheme"
     loading="lazy"

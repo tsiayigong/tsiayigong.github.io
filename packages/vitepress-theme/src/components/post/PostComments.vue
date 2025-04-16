@@ -6,7 +6,7 @@ import Giscus from '@giscus/vue'
   <Giscus
     id="comments"
     repo="tsiayigong/tsiayigong.github.io"
-    repoId="MDEwOlJlcG9zaXRvcnkxNjQ0Njk4MzA="
+    repoId="R_kgDOIgWCOA"
     category="Comments"
     categoryId="DIC_kwDOIgWCOM4CpJl8"
     mapping="pathname"

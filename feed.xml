@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Tsiayi Gong’s Site</title>
+        <link>/</link>
+        <description>Personal website of Tsiayi Gong</description>
+        <lastBuildDate>Sat, 25 Apr 2026 05:07:25 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>© 2025–2026 Tsiayi Gong</copyright>
+    </channel>
+</rss>

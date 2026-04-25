@@ -1,1 +1,0 @@
-import{_ as e,b as t,a}from"./chunks/framework.BpPaR51Y.js";const m=JSON.parse('{"title":"","titleTemplate":false,"description":"","frontmatter":{"layout":"home","titleTemplate":false},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),n={name:"index.md"};function o(r,s,i,c,d,l){return a(),t("div")}const _=e(n,[["render",o]]);export{m as __pageData,_ as default};

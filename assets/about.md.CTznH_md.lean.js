@@ -1,4 +1,4 @@
-import{_ as l,a as s,b as r,E as e,e as n,d as i,j as d}from"./chunks/framework.BqkbT7F8.js";const u={},p={class:"whitespace-nowrap py-2 text-center"};function c(o,a){return s(),r("pre",p,a[0]||(a[0]=[e("    |Quantum computing⟩"),n("span",{class:"mx-1"},"⊗",-1),e(`
+import{_ as l,a as s,b as r,E as e,e as n,d as i,j as d}from"./chunks/framework.BAghNNDe.js";const u={},p={class:"whitespace-nowrap py-2 text-center"};function c(o,a){return s(),r("pre",p,a[0]||(a[0]=[e("    |Quantum computing⟩"),n("span",{class:"mx-1"},"⊗",-1),e(`
     `),n("div",{class:"inline-block align-middle"},[e(`
       `),n("div",{class:"border-b border-current"},[e(`
         |Font engineering⟩`),n("span",{class:"mx-1"},"+"),e(`|Type design⟩
